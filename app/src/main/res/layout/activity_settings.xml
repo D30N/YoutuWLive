@@ -241,12 +241,13 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/creditLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
             android:gravity="center"
-            android:text="YoutuW Live v1.0.0 · Made by Deon"
-            android:textColor="#6E6E80"
+            android:text="This app was made by Deon"
+            android:textColor="#64B5F6"
             android:textSize="12sp" />
     </LinearLayout>
 </ScrollView>

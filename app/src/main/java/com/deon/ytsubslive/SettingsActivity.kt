@@ -56,6 +56,20 @@ class SettingsActivity : Activity() {
         buildThemeRows()
         applyPreview(Themes.current(this))
 
+        val creditLine = findViewById<TextView>(R.id.creditLine)
+        creditLine.paintFlags =
+            creditLine.paintFlags or android.graphics.Paint.UNDERLINE_TEXT_FLAG
+        creditLine.setOnClickListener {
+            runCatching {
+                startActivity(
+                    android.content.Intent(
+                        android.content.Intent.ACTION_VIEW,
+                        android.net.Uri.parse("https://deepakdeon.github.io")
+                    )
+                )
+            }
+        }
+
         findViewById<Button>(R.id.btnSave).setOnClickListener {
             var h = handleInput.text.toString().trim()
             if (h.isEmpty()) h = "@deepak-deon"
